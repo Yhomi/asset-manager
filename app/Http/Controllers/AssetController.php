@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Asset;
 
 class AssetController extends Controller
 {
@@ -13,7 +14,9 @@ class AssetController extends Controller
      */
     public function index()
     {
-        return "<h1>Asset</h1>";
+        $asset=Asset::orderBy('created_at','desc')->get();
+
+        return view('pages.index',compact('asset'));
     }
 
     /**
@@ -45,7 +48,7 @@ class AssetController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
