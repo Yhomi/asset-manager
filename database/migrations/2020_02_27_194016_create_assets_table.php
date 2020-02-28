@@ -19,6 +19,7 @@ class CreateAssetsTable extends Migration
             $table->string('staff_id');
             $table->string('department');
             $table->string('device_type');
+            $table->string('device_name');
             $table->string('serial_no');
             $table->string('tag_no');
             $table->timestamps();

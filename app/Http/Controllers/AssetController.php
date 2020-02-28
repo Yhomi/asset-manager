@@ -38,7 +38,34 @@ class AssetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate
+
+        $this->validate($request,array(
+            'name'=>'required',
+            'staff_id'=>'required|max:6',
+            'department'=>'required',
+            'device_type'=>'required',
+            'device_name'=>'required',
+            'serial_no'=>'required',
+            'tag_no'=>'required'
+        ));
+
+        // store assets
+
+        $asset=new Asset;
+        $asset->name=$request->name;
+        $asset->staff_id=$request->staff_id;
+        $asset->department=$request->department;
+        $asset->device_type=$request->device_type;
+        $asset->device_name=$request->device_name;
+        $asset->serial_no=$request->serial_no;
+        $asset->tag_no=$request->tag_no;
+        $asset->save();
+
+        // redirect
+
+        return \redirect('/asset');
+
     }
 
     /**

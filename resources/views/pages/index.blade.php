@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
 
@@ -29,7 +29,10 @@
                 </tr>
             @endforeach
         </table>
+        @else
+        <h1 class="text-center">No Asset found in the database</h1>
         @endif
+
     </div>
 
 
