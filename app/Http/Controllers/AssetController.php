@@ -64,7 +64,7 @@ class AssetController extends Controller
 
         // redirect
 
-        return \redirect('/asset');
+        return \redirect('/asset')->with('success','Device Added');
 
     }
 

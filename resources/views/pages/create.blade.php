@@ -16,12 +16,6 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -30,12 +24,6 @@
 
                             <div class="col-md-6">
                                 <input id="staff_id" type="text" class="form-control @error('staff_id') is-invalid @enderror" name="staff_id" value="{{ old('email') }}">
-
-                                @error('staff_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -45,11 +33,7 @@
                             <div class="col-md-6">
                                 <input id="department" type="text" class="form-control @error('department') is-invalid @enderror" name="department" value="{{ old('department') }}">
 
-                                @error('department')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
                             </div>
                         </div>
 
@@ -58,12 +42,6 @@
 
                             <div class="col-md-6">
                                 <input id="device_type" type="text" class="form-control @error('device_type') is-invalid @enderror" name="device_type" value="{{ old('device_type') }}">
-
-                                @error('device_type')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -72,12 +50,6 @@
 
                             <div class="col-md-6">
                                 <input id="device_name" type="text" class="form-control @error('device_name') is-invalid @enderror" name="device_name" value="{{ old('device_name') }}">
-
-                                @error('device_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -87,11 +59,7 @@
                             <div class="col-md-6">
                                 <input id="serial_no" type="text" class="form-control @error('serial_no') is-invalid @enderror" name="serial_no" value="{{ old('serial_no') }}">
 
-                                @error('serial_no')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
                             </div>
                         </div>
 
@@ -101,11 +69,7 @@
                             <div class="col-md-6">
                                 <input id="tag_no" type="text" class="form-control @error('tag_no') is-invalid @enderror" name="tag_no" value="{{ old('tag_no') }}">
 
-                                @error('tag_no')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
                             </div>
                         </div>
 
