@@ -22,6 +22,7 @@ class CreateAssetsTable extends Migration
             $table->string('device_name');
             $table->string('serial_no');
             $table->string('tag_no');
+            $table->string('location');
             $table->timestamps();
         });
     }

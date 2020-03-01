@@ -47,7 +47,8 @@ class AssetController extends Controller
             'device_type'=>'required',
             'device_name'=>'required',
             'serial_no'=>'required',
-            'tag_no'=>'required'
+            'tag_no'=>'required',
+            'location'=>'required'
         ));
 
         // store assets
@@ -60,6 +61,7 @@ class AssetController extends Controller
         $asset->device_name=$request->device_name;
         $asset->serial_no=$request->serial_no;
         $asset->tag_no=$request->tag_no;
+        $asset->location=$request->location;
         $asset->save();
 
         // redirect
@@ -108,7 +110,8 @@ class AssetController extends Controller
             'device_type'=>'required',
             'device_name'=>'required',
             'serial_no'=>'required',
-            'tag_no'=>'required'
+            'tag_no'=>'required',
+            'location'=>'required'
         ));
 
         $asset=Asset::find($id);
@@ -119,6 +122,7 @@ class AssetController extends Controller
         $asset->device_name=$request->device_name;
         $asset->serial_no=$request->serial_no;
         $asset->tag_no=$request->tag_no;
+        $asset->location=$request->location;
         $asset->save();
         return \redirect('/asset')->with('success',"Device Updated");
     }

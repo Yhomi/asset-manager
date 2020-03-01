@@ -13,6 +13,7 @@
                 <th>Device Name</th>
                 <th>Searial_no</th>
                 <th>Tag_no</th>
+                <th>Location</th>
                 <th>Name</th>
                 <th>Staff_id</th>
                 <th>Department</th>
@@ -26,6 +27,7 @@
                         <td>{{$record->device_name}}</td>
                         <td>{{$record->serial_no}}</td>
                         <td>{{$record->tag_no}}</td>
+                        <td>{{$record->location}}</td>
                         <td>{{$record->name}}</td>
                         <td>{{$record->staff_id}}</td>
                         <td>{{$record->department}}</td>

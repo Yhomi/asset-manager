@@ -68,8 +68,14 @@
 
                             <div class="col-md-6">
                                 <input id="tag_no" type="text" class="form-control @error('tag_no') is-invalid @enderror" name="tag_no" value="{{ old('tag_no') }}">
+                            </div>
+                        </div>
 
+                        <div class="form-group row">
+                            <label for="Location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="location" type="text" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ old('location') }}">
                             </div>
                         </div>
 
