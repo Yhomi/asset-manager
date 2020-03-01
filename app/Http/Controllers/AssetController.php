@@ -131,6 +131,9 @@ class AssetController extends Controller
      */
     public function destroy($id)
     {
+        $asset=Asset::find($id);
+        $asset->forceDelete();
 
+        return redirect('/asset')->with('success',"Device Deleted");
     }
 }

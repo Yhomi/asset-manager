@@ -16,7 +16,7 @@
                 <th>Name</th>
                 <th>Staff_id</th>
                 <th>Department</th>
-                <th colspan="3">Action</th>
+                <th colspan="2">Action</th>
             </tr>
         </thead>
             @foreach ($asset as $record)
@@ -31,8 +31,12 @@
                         <td>{{$record->department}}</td>
                         <td>
                         <a href="\assetManager/public/asset/{{$record->id}}" title="View details" class="text-secondary"><i class="fas fa-info-circle fa-lg"></i></a>
-                            <a href="\assetManager/public/asset/{{$record->id}}/edit" title="Edit" class="text-primary"><i class="fas fa-edit fa-lg"></i></a>
-                            <a href="" title="Delete" class="text-danger"><i class="fas fa-trash-alt fa-lg"></i></a>
+                            <a href="\assetManager/public/asset/{{$record->id}}" title="Edit" class="text-primary"><i class="fas fa-edit fa-lg"></i></a>
+                            <form method="POST" action="\assetManager/public/asset/{{$record->id}}">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                            </form>
                         </td>
                 </tr>
             @endforeach
