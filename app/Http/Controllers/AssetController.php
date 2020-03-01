@@ -88,6 +88,8 @@ class AssetController extends Controller
     public function edit($id)
     {
         //
+        $asset=Asset::findorFail($id);
+        return view('pages.edit',\compact('asset'));
     }
 
     /**
@@ -99,7 +101,26 @@ class AssetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,array(
+            'name'=>'required',
+            'staff_id'=>'required|max:6',
+            'department'=>'required',
+            'device_type'=>'required',
+            'device_name'=>'required',
+            'serial_no'=>'required',
+            'tag_no'=>'required'
+        ));
+
+        $asset=Asset::find($id);
+        $asset->name=$request->name;
+        $asset->staff_id=$request->staff_id;
+        $asset->department=$request->department;
+        $asset->device_type=$request->device_type;
+        $asset->device_name=$request->device_name;
+        $asset->serial_no=$request->serial_no;
+        $asset->tag_no=$request->tag_no;
+        $asset->save();
+        return \redirect('/asset')->with('success',"Device Updated");
     }
 
     /**
@@ -110,6 +131,6 @@ class AssetController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }
