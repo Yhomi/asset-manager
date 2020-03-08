@@ -14,9 +14,7 @@
                 <th>Searial_no</th>
                 <th>Tag_no</th>
                 <th>Location</th>
-                <th>Name</th>
-                <th>Staff_id</th>
-                <th>Department</th>
+                <th>DateAdded</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -28,9 +26,7 @@
                         <td>{{$record->serial_no}}</td>
                         <td>{{$record->tag_no}}</td>
                         <td>{{$record->location}}</td>
-                        <td>{{$record->name}}</td>
-                        <td>{{$record->staff_id}}</td>
-                        <td>{{$record->department}}</td>
+                        <td>{{$record->created_at}}</td>
                         <td>
                         <a href="\assetManager/public/asset/{{$record->id}}" title="View details" class="btn btn-secondary btn-sm">View</a>
                             <a href="\assetManager/public/asset/{{$record->id}}/edit" title="Edit" class="btn btn-primary btn-sm">Edit</a>
