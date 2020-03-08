@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Asset;
+use App\User;
 
 class AssetController extends Controller
 {
@@ -62,6 +63,7 @@ class AssetController extends Controller
         $asset->serial_no=$request->serial_no;
         $asset->tag_no=$request->tag_no;
         $asset->location=$request->location;
+        $asset->user_id=auth()->user()->id;
         $asset->save();
 
         // redirect

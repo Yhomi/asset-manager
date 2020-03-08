@@ -35,7 +35,7 @@
                         <a href="\assetManager/public/asset/{{$record->id}}" title="View details" class="btn btn-secondary btn-sm">View</a>
                             <a href="\assetManager/public/asset/{{$record->id}}/edit" title="Edit" class="btn btn-primary btn-sm">Edit</a>
                         {{-- <a href="javascript:void(0)" class="btn btn-danger btn-sm delBtn" data-id="{{$record->id}}">Delete</a> --}}
-                                <form method="POST" action="\assetManager/public/asset/{{$record->id}}" class="form-inline float-left mr-2">
+                                <form method="POST" action="\assetManager/public/asset/{{$record->id}}" class="float-left mr-2">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="submit" value="Delete" class="btn btn-danger btn-sm">
