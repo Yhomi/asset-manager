@@ -26,8 +26,28 @@
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     {{ config('app.name', 'Xpress') }}
                 </a>
-                <a class="navbar-brand text-white" href="/assetManager/public/asset/create">Asset Manager</a>
-
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                          Asset Manager
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="/assetManager/public/asset\create">Create Asset</a>
+                          <a class="dropdown-item" href="/assetManager/public/asset">Asset table</a>
+                        </div>
+                      </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                          Leave Manager
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="/assetManager/public/asset\create">Create Leave</a>
+                          <a class="dropdown-item" href="/assetManager/public/asset">Check Leave</a>
+                        </div>
+                      </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

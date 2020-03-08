@@ -2,8 +2,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mt-5">
+    <h2 class="text-center mb-2">Asset List</h2>
     <div class="card">
+
         @if (count($asset)>0)
         <table class="table table-striped table-sm table-bordered">
         <thead>
