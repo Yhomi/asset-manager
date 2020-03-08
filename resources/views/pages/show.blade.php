@@ -44,7 +44,10 @@
                                 <th>Added By</th>
                                 <td>{{$asset->user->name}}</td>
                             </tr>
-
+                            <tr>
+                                <th>Date Added</th>
+                                <td>{{$asset->created_at}}</td>
+                            </tr>
                         </table>
 
                     </div>
