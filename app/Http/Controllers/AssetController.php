@@ -78,7 +78,7 @@ class AssetController extends Controller
      */
     public function show($id)
     {
-
+        return "It worked";
     }
 
     /**
@@ -139,5 +139,6 @@ class AssetController extends Controller
         $asset->forceDelete();
 
         return redirect('/asset')->with('success',"Device Deleted");
+
     }
 }

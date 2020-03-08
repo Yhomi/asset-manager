@@ -17,7 +17,7 @@
                 <th>Name</th>
                 <th>Staff_id</th>
                 <th>Department</th>
-                <th colspan="2">Action</th>
+                <th colspan="3">Action</th>
             </tr>
         </thead>
             @foreach ($asset as $record)
@@ -32,13 +32,14 @@
                         <td>{{$record->staff_id}}</td>
                         <td>{{$record->department}}</td>
                         <td>
-                        <a href="\assetManager/public/asset/{{$record->id}}" title="View details" class="text-secondary"><i class="fas fa-info-circle fa-lg"></i></a>
-                            <a href="\assetManager/public/asset/{{$record->id}}" title="Edit" class="text-primary"><i class="fas fa-edit fa-lg"></i></a>
-                            <form method="POST" action="\assetManager/public/asset/{{$record->id}}">
-                                {{ csrf_field() }}
-                                <input type="hidden" name="_method" value="DELETE">
-                                <input type="submit" value="Delete" class="btn btn-danger btn-sm">
-                            </form>
+                        <a href="\assetManager/public/asset/{{$record->id}}" title="View details" class="btn btn-secondary btn-sm">View</a>
+                            <a href="\assetManager/public/asset/{{$record->id}}/edit" title="Edit" class="btn btn-primary btn-sm">Edit</a>
+                        {{-- <a href="javascript:void(0)" class="btn btn-danger btn-sm delBtn" data-id="{{$record->id}}">Delete</a> --}}
+                                <form method="POST" action="\assetManager/public/asset/{{$record->id}}" class="form-inline float-left mr-2">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                                </form>
                         </td>
                 </tr>
             @endforeach
@@ -54,3 +55,22 @@
 </div>
 
 @endsection
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
+    // $(document).ready(function(){
+    //     $('body').on('click','.delBtn',function(e){
+    //         e.preventDefault()
+    //         //  console.log('connected')
+    //         var del_id=$(this).data('id');
+    //         // console.log(del_id)
+    //         $.ajax({
+    //             type:"DELETE",
+    //             url:"/assetManager/public/asset/"+del_id,
+    //             success:function(res){
+    //                 console.log(res)
+    //             }
+    //         })
+    //     })
+    // })
+</script>
